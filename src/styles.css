@@ -1,6 +1,47 @@
-/* ===========================================================
-   CAMPUS PAPER LOOK - VERSI RINGAN DAN NYAMAN
-   =========================================================== */
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  src: url('/fonts/GloriaHallelujah-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'HandwritingCR 2';
+  src: url('/fonts/HandwritingCR-2.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Jerimhs';
+  src: url('/fonts/Jerimhs-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'My Handwriting';
+  src: url('/fonts/My_handwriting.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'My Hands Are Holding You';
+  src: url('/fonts/MyHandsareHoldingYou.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Papernotes Sketch';
+  src: url('/fonts/Papernotes Sketch.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Papernotes';
+  src: url('/fonts/Papernotes.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Setia Hati';
+  src: url('/fonts/SetiaHati-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Shadows Into Light';
+  src: url('/fonts/ShadowsIntoLight-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Trash Hand';
+  src: url('/fonts/TrashHand.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Vanilla Pancake';
+  src: url('/fonts/Vanilla Pancake.ttf') format('truetype');
+}
 
 :root {
   --bg: #f4f3ef;        /* latar belakang lembut */
