@@ -1,0 +1,134 @@
+:root{
+  --bg:#f5f5f7;
+  --panel:#fff;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); margin:0; padding:24px}
+.app-root{max-width:1100px;margin:0 auto}
+h1{margin:0 0 12px}
+.container{display:flex;gap:18px}
+.controls{width:360px;padding:16px;background:var(--panel);border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+.controls label{display:block;margin-bottom:12px;font-size:14px}
+.controls input[type=text], .controls input[type=file], .controls select, .controls textarea{width:100%;padding:8px;margin-top:6px;border:1px solid #e2e8f0;border-radius:6px}
+.controls textarea{resize:vertical}
+.buttons{display:flex;gap:8px;margin-top:6px}
+button{padding:8px 12px;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer}
+button.muted{background:#e5e7eb;color:#111}
+.preview-area{flex:1}
+.preview-wrap{padding:12px;background:linear-gradient(180deg,#fafafa,#fff);border-radius:8px;border:1px solid #eee}
+.paper{width:720px;min-height:1014px;margin:0 auto;padding:36px;background:#fff;position:relative;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,0.06)}
+.paper.blank{background:linear-gradient(#ee2b2b,#e61313)}
+.paper.lined {
+  background-color: #fff;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0px,
+    rgba(0, 0, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 28px
+  );
+  background-size: 100% 30px;  /* di .paper */
+line-height: 30px;           /* di .paper dan .line */
+  padding: 50px 30px 36px 30px; /* padding atas lebih besar untuk header */
+  line-height: 39px; /* tulisannya sedikit di atas garis */
+  border-radius: 6px;
+  position: relative;
+  min-height: 1014px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+.paper {
+  position: relative;
+  width: 720px;
+  aspect-ratio: 300 / 441; 
+  
+  margin: 0 auto;
+  padding: 85px 20px 30px 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+
+  /* background gambar */
+  background-image: url('/img/folio.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 6px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+
+  font-family: 'Patrick Hand', cursive;
+  font-size: 30px;
+  color: #111;
+  line-height: 31px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
+  /* teks */
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
+  color: #111;
+  line-height: 20px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+
+/* Margin kanan-kiri */
+.paper-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  padding-top: 70px;
+}
+  
+
+/* Margin kanan kiri seperti buku tulis */
+.paper-inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  padding-top: 70px;
+}
+
+
+.paper .written {
+  white-space: pre-wrap;  /* penting */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 15px;
+  text-align: left;
+  max-width: 600px;
+}
+
+.paper.grid{background-image: linear-gradient(0deg, rgba(8, 8, 8, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px); background-size:36px 36px}
+.paper .meta-row{display:flex;justify-content:space-between;align-items:flex-start}
+.paper .date{font-size:14px;color:#444}
+.paper .meta-right{text-align:right}
+.paper .name{font-weight:700}
+.paper .kelas{font-size:13px;color:#666}
+.paper .fakultas{margin-top:8px;color:#444}
+.paper .written{margin-top:20px;font-size:20px;line-height:1.7}
+.paper .line {
+  display: block;
+  white-space: pre-wrap;  /* biar teks bisa turun ke baris berikut */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 1 3px;
+  line-height: 24px;      /* sejajarkan dengan garis background */
+}
+
+.paper .signature{position:absolute;right:28px;bottom:24px;font: size 16px;color:#888}
+.hint{font-size:13px;color:#666;margin-top:8px}
+
+/* Handwriting fonts */
+.paper{font-family: 'Patrick Hand', 'Shadows Into Light', 'Gloria Hallelujah', 'Indie Flower', 'Reenie Beanie', 'Caveat', 'Handlee', 'HandwritingCR 2', 'Heart Warming by Situjuh', 'Noona Land', serif}
+
+/* responsive */
+@media(max-width:980px){.container{flex-direction:column}.controls{width:100%}.paper{width:600px}}
