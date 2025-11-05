@@ -1,25 +1,26 @@
 import React, { useRef, useState } from 'react'
 import html2canvas from 'html2canvas'
 
-// Daftar jenis kertas
+
 const PAPERS = [
   { id: 'folio', label: 'Folio (300×441)', src: '/img/folio.jpg', ratio: 300 / 441 },
   { id: 'folio2', label: 'Folio 2 (960×1280)', src: '/img/folio2.jpg', ratio: 960 / 1280 }
 ]
 
-// Daftar font
 const FONTS = [
-  { id: 'patrick', label: 'Patrick Hand', css: "'Patrick Hand', cursive" },
-  { id: 'shadows', label: 'Shadows Into Light', css: "'Shadows Into Light', cursive" },
   { id: 'gloria', label: 'Gloria Hallelujah', css: "'Gloria Hallelujah', cursive" },
-  { id: 'indie', label: 'Indie Flower', css: "'Indie Flower', cursive" },
-  { id: 'reenie', label: 'Reenie Beanie', css: "'Reenie Beanie', cursive" },
-  { id: 'caveat', label: 'Caveat', css: "'Caveat', cursive" },
-  { id: 'handlee', label: 'Handlee', css: "'Handlee', cursive" },
   { id: 'handwritingcr2', label: 'HandwritingCR 2', css: "'HandwritingCR 2', cursive" },
-  { id: 'heartwarming', label: 'Heart Warming by Situjuh', css: "'Heart Warming by Situjuh', cursive" },
-  { id: 'noonaland', label: 'Noona Land', css: "'Noona Land', cursive" }
+  { id: 'jerimhs', label: 'Jerimhs', css: "'Jerimhs', cursive" },
+  { id: 'myhandwriting', label: 'My Handwriting', css: "'My Handwriting', cursive" },
+  { id: 'myhandsareholdingyou', label: 'My Hands Are Holding You', css: "'My Hands Are Holding You', cursive" },
+  { id: 'papernotesketch', label: 'Papernotes Sketch', css: "'Papernotes Sketch', cursive" },
+  { id: 'papernotes', label: 'Papernotes', css: "'Papernotes', cursive" },
+  { id: 'setiahati', label: 'Setia Hati', css: "'Setia Hati', cursive" },
+  { id: 'shadows', label: 'Shadows Into Light', css: "'Shadows Into Light', cursive" },
+  { id: 'trashhand', label: 'Trash Hand', css: "'Trash Hand', cursive" },
+  { id: 'vanillapancake', label: 'Vanilla Pancake', css: "'Vanilla Pancake', cursive" },
 ]
+
 
 export default function App() {
   const [paperId, setPaperId] = useState('folio')
@@ -57,7 +58,7 @@ export default function App() {
       <div className="container">
         <div className="controls">
           
-          {/* Pilihan jenis kertas */}
+          
           <label>Pilih Jenis Kertas:
             <select value={paperId} onChange={e => setPaperId(e.target.value)}>
               {PAPERS.map(p => (
@@ -66,7 +67,7 @@ export default function App() {
             </select>
           </label>
 
-          {/* Pilihan font */}
+          
           <label>Pilih Font:
             <select value={font} onChange={e => setFont(e.target.value)}>
               {FONTS.map(f => <option key={f.id} value={f.id}>{f.label}</option>)}
