@@ -1,49 +1,58 @@
 /* ===========================================================
-   CAMPUS PAPER LOOK THEME - LIGHT, CLEAN, AND STUDENT-FRIENDLY
+   CAMPUS PAPER LOOK - VERSI RINGAN DAN NYAMAN
    =========================================================== */
 
 :root {
-  --bg: #f5f3ec;          /* warna latar belakang lembut */
-  --panel: #ffffff;       /* panel putih bersih */
-  --accent: #2a62d3;      /* biru tinta */
-  --text: #222;           /* teks utama */
-  --subtext: #6b7280;     /* teks sekunder */
-  --border: #e0e0e0;      /* garis lembut */
+  --bg: #f4f3ef;        /* latar belakang lembut */
+  --panel: #ffffff;     /* panel putih bersih */
+  --accent: #2a62d3;    /* biru tinta */
+  --text: #222;         /* teks utama */
+  --subtext: #666;      /* teks sekunder */
+  --border: #e5e7eb;    /* garis lembut */
 }
 
-/* Reset & base */
-* {
-  box-sizing: border-box;
-}
+/* dasar */
+* { box-sizing: border-box; }
+
 body {
-  margin: 0;
-  padding: 24px;
-  font-family: "Inter", "Poppins", sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
+  margin: 0;
+  padding: 24px;
 }
+
 .app-root {
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Layout utama */
+h1 {
+  margin: 0 0 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* layout */
 .container {
   display: flex;
   gap: 20px;
 }
+
+/* panel kiri */
 .controls {
   width: 360px;
-  background: var(--panel);
   padding: 20px;
+  background: var(--panel);
   border-radius: 12px;
   border: 1px solid var(--border);
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: box-shadow 0.2s ease;
 }
 .controls:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
+
 .controls label {
   display: block;
   margin-bottom: 12px;
@@ -51,45 +60,45 @@ body {
   color: var(--subtext);
 }
 
-/* Input form */
 .controls input[type=text],
 .controls input[type=file],
 .controls select,
 .controls textarea {
   width: 100%;
   padding: 8px 10px;
+  margin-top: 4px;
   border: 1px solid #d1d5db;
   border-radius: 6px;
   background: #f9fafb;
+  color: var(--text);
+  font-size: 14px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .controls input:focus,
 .controls select:focus,
 .controls textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(42, 98, 211, 0.2);
+  box-shadow: 0 0 0 2px rgba(42,98,211,0.2);
   outline: none;
 }
-.controls textarea {
-  resize: vertical;
-  min-height: 80px;
-}
 
-/* Tombol */
+.controls textarea { resize: vertical; }
+
 .buttons {
   display: flex;
   gap: 10px;
-  margin-top: 8px;
+  margin-top: 10px;
 }
+
 button {
-  background: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 8px;
   padding: 10px 14px;
-  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
   font-weight: 500;
-  transition: background 0.2s, transform 0.15s;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
 }
 button:hover {
   background: #1e4ed8;
@@ -103,47 +112,49 @@ button.muted:hover {
   background: #d1d5db;
 }
 
-/* Area pratinjau */
+/* area pratinjau kanan */
 .preview-area {
   flex: 1;
 }
 .preview-wrap {
-  background: #fafafa;
-  border: 1px solid var(--border);
+  padding: 16px;
+  background: linear-gradient(180deg, #fafafa, #fff);
   border-radius: 12px;
-  padding: 20px;
+  border: 1px solid var(--border);
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Tampilan kertas */
+/* kertas */
 .paper {
-  position: relative;
   width: 720px;
   min-height: 1014px;
   margin: 0 auto;
+  padding: 70px 40px 40px;
   background: url('/img/folio.jpg') center/cover no-repeat;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #ddd;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  padding: 70px 40px 40px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  position: relative;
   font-family: 'Patrick Hand', cursive;
-  color: #111;
   font-size: 22px;
   line-height: 30px;
+  color: #111;
   white-space: pre-wrap;
   word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-/* Bagian metadata kertas (nama, tanggal, kelas) */
+/* baris atas di kertas */
 .paper .meta-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   color: var(--subtext);
 }
+
 .paper .name {
   font-weight: 600;
   color: var(--text);
@@ -153,17 +164,34 @@ button.muted:hover {
   color: var(--subtext);
 }
 
-/* Tulisan tangan */
+/* tulisan */
 .paper .written {
   margin-top: 20px;
-  font-family: 'Patrick Hand', cursive;
   font-size: 22px;
   line-height: 32px;
+  font-family: 'Patrick Hand', cursive;
   color: #111;
+  text-align: left;
 }
 
-/* Responsif */
-@media (max-width: 980px) {
+/* tanda tangan */
+.paper .signature {
+  position: absolute;
+  right: 28px;
+  bottom: 24px;
+  font-size: 16px;
+  color: #888;
+}
+
+/* hint bawah */
+.hint {
+  font-size: 13px;
+  color: var(--subtext);
+  margin-top: 8px;
+}
+
+/* responsif */
+@media(max-width: 980px) {
   .container {
     flex-direction: column;
   }
