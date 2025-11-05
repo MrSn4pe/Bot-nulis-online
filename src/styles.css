@@ -245,3 +245,44 @@ button.muted:hover {
     line-height: 28px;
   }
 }
+/* ===========================================================
+   FONT DROPDOWN PREVIEW - Tampilan font langsung di pilihan
+   =========================================================== */
+
+/* Bungkus dropdown agar tampil rapi */
+.controls select {
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  color: #111;
+  cursor: pointer;
+}
+
+/* Saat hover/fokus */
+.controls select:hover,
+.controls select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(42, 98, 211, 0.2);
+  outline: none;
+}
+
+/* ===== Font Preview Langsung di <option> ===== */
+select#font option[value*="Gloria"]      { font-family: 'Gloria Hallelujah', cursive; }
+select#font option[value*="HandwritingCR"] { font-family: 'HandwritingCR 2', cursive; }
+select#font option[value*="Jerimhs"]     { font-family: 'Jerimhs', cursive; }
+select#font option[value*="My Handwriting"] { font-family: 'My Handwriting', cursive; }
+select#font option[value*="My Hands Are Holding You"] { font-family: 'My Hands Are Holding You', cursive; }
+select#font option[value*="Papernotes Sketch"] { font-family: 'Papernotes Sketch', cursive; }
+select#font option[value*="Papernotes"]  { font-family: 'Papernotes', cursive; }
+select#font option[value*="Setia Hati"]  { font-family: 'Setia Hati', cursive; }
+select#font option[value*="Shadows"]     { font-family: 'Shadows Into Light', cursive; }
+select#font option[value*="Trash"]       { font-family: 'Trash Hand', cursive; }
+select#font option[value*="Vanilla"]     { font-family: 'Vanilla Pancake', cursive; }
+
+/* Biar semua pilihan font terlihat agak besar dan mudah dibaca */
+select#font option {
+  font-size: 18px;
+  padding: 4px 8px;
+}
