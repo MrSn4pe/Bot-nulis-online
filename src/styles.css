@@ -372,3 +372,53 @@ select#font option {
   word-wrap: break-word;
   text-align: left;
 }
+/* ===============================================
+   HEADER FIXED DI ATAS KERTAS
+   =============================================== */
+
+.paper {
+  position: relative; /* supaya anak absolut posisinya relatif ke kertas */
+}
+
+/* Header nama, kelas, fakultas, tanggal */
+.header-section {
+  position: absolute;
+  top: 60px;              /* sesuaikan: ini jarak dari tepi atas kertas */
+  left: 60px;             /* sesuaikan agar pas di garis pertama */
+  right: 60px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 31px;      /* agar sejajar garis folio */
+  font-family: inherit;
+  color: #111;
+  white-space: pre-wrap;
+  z-index: 2;
+}
+
+.left-info p,
+.right-info p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Supaya teks di kanan tetap rata kanan */
+.right-info {
+  text-align: right;
+}
+
+/* Area tulisan utama */
+.written {
+  position: absolute;
+  top: 190px;             /* mulai dari garis keempat misalnya */
+  left: 60px;
+  right: 60px;
+  font-size: 22px;
+  line-height: 31px;
+  font-family: inherit;
+  color: #111;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: left;
+  z-index: 1;
+}
