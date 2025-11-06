@@ -3,8 +3,8 @@
   --bg: #f4f3ef;        /* latar belakang lembut */
   --panel: #ffffff;     /* panel putih bersih */
   --accent: #2a62d3;    /* biru tinta */
-  --text: #222;         /* teks utama */
-  --subtext: #666;      /* teks sekunder */
+  --text: #1a1919;         /* teks utama */
+  --subtext: #2b2a2a;      /* teks sekunder */
   --border: #e5e7eb;    /* garis lembut */
 }
 
@@ -160,7 +160,7 @@ button.muted:hover {
 .preview-wrap {
   padding: 16px;
   background: linear-gradient(180deg, #fafafa, #fff);
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid var(--border);
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
@@ -383,13 +383,13 @@ select#font option {
 /* Header nama, kelas, fakultas, tanggal */
 .header-section {
   position: absolute;
-  top: 60px;              /* sesuaikan: ini jarak dari tepi atas kertas */
-  left: 60px;             /* sesuaikan agar pas di garis pertama */
-  right: 60px;
+  top: 0px;              /* sesuaikan: ini jarak dari tepi atas kertas */
+  left: 5px;             /* sesuaikan agar pas di garis pertama */
+  right: 10px;
   display: flex;
   justify-content: space-between;
   font-size: 20px;
-  line-height: 31px;      /* agar sejajar garis folio */
+  line-height: 20px;      /* agar sejajar garis folio */
   font-family: inherit;
   color: #111;
   white-space: pre-wrap;
@@ -410,13 +410,13 @@ select#font option {
 /* Area tulisan utama */
 .written {
   position: absolute;
-  top: 190px;             /* mulai dari garis keempat misalnya */
-  left: 60px;
-  right: 60px;
+  top: 64px;             /* mulai dari garis keempat misalnya */
+  left: 10px;
+  right: 10px;
   font-size: 22px;
-  line-height: 31px;
+  line-height: 8px;
   font-family: inherit;
-  color: #111;
+  color: #1d1c1c;
   white-space: pre-wrap;
   word-wrap: break-word;
   text-align: left;
