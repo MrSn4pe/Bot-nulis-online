@@ -116,21 +116,25 @@ export default function App() {
                 backgroundRepeat: 'no-repeat',
               }}
             >
-              <div className="meta-row">
-                <div className="date">{date}</div>
-                <div className="meta-right">
-                  <div className="name">{name}</div>
-                  <div className="kelas">{kelas}</div>
-                </div>
-              </div>
+             <div className="header-section">
+  <div className="left-info">
+    <p><strong>Nama:</strong> {name || '................................'}</p>
+    <p><strong>Kelas/NIM:</strong> {kelas || '............................'}</p>
+    <p><strong>Fakultas:</strong> {fakultas || '............................'}</p>
+  </div>
+  <div className="right-info">
+    <p><strong>Hari/Tanggal:</strong> {date || '............................'}</p>
+  </div>
+</div>
 
-              <div className="fakultas">{fakultas}</div>
+<hr className="header-line" />
 
-              <div className="written" style={{ fontFamily: selectedFont }}>
+<div className="written" style={{ fontFamily: selectedFont }}>
   {text.split('\n').map((line, i) => (
     <p key={i} className="line">{line || '\u00A0'}</p>
   ))}
 </div>
+
             </div>
           </div>
           <p className="hint">©️Dav</p>
