@@ -1,4 +1,3 @@
-
 :root {
   --bg: #f4f3ef;        /* latar belakang lembut */
   --panel: #ffffff;     /* panel putih bersih */
@@ -317,61 +316,60 @@ select#font option {
 .written {
   margin-top: 10px;
   font-size: 22px;
-  line-height: 32px;
+  line-height: 29px;
   text-align: left;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-/* ===============================================
-   HEADER (Nama, Kelas, Fakultas, Tanggal)
-   =============================================== */
-
+/* ==== Header (Nama, Kelas, Fakultas, Tanggal) ==== */
 .header-section {
+  position: absolute;
+  top: 48px; /* pas di area atas kertas */
+  left: 70px;
+  right: 70px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 30px;         /* jarak dari tepi atas kertas */
-  margin-bottom: 8px;
-  padding: 0 10px;
   font-size: 20px;
-  line-height: 31px;        /* biar sejajar garis */
+  line-height: 26px;
   font-family: inherit;
   color: #111;
-  white-space: pre-wrap;
+  z-index: 2;
 }
 
-/* Kolom kiri (Nama, Kelas, Fakultas) */
+.left-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .left-info p {
   margin: 0;
-  padding: 0;
 }
 
-/* Kolom kanan (Tanggal) */
 .right-info {
   text-align: right;
 }
 
 .right-info p {
   margin: 0;
-  padding: 0;
 }
 
-/* Hilangkan garis ungu sebelumnya */
-.header-line {
-  display: none;
-}
-
-/* Pastikan tulisan isi sejajar garis */
+/* ==== Tulisan Utama ==== */
 .written {
-  margin-top: 16px; /* sedikit turun agar mulai dari garis berikutnya */
+  position: absolute;
+  top: 180px; /* sejajar garis pertama kosong */
+  left: 70px;
+  right: 70px;
   font-size: 22px;
-  line-height: 31px; /* jarak antarbaris sama dengan garis kertas */
+  line-height: 28px; /* pas dengan jarak antar garis */
   font-family: inherit;
   color: #111;
   white-space: pre-wrap;
-  word-wrap: break-word;
   text-align: left;
+  z-index: 1;
 }
+
 /* ===============================================
    HEADER FIXED DI ATAS KERTAS
    =============================================== */
@@ -383,7 +381,7 @@ select#font option {
 /* Header nama, kelas, fakultas, tanggal */
 .header-section {
   position: absolute;
-  top: 0px;              /* sesuaikan: ini jarak dari tepi atas kertas */
+  top: 17px;              /* sesuaikan: ini jarak dari tepi atas kertas */
   left: 5px;             /* sesuaikan agar pas di garis pertama */
   right: 10px;
   display: flex;
@@ -414,7 +412,7 @@ select#font option {
   left: 10px;
   right: 10px;
   font-size: 22px;
-  line-height: 8px;
+  line-height: 28px;
   font-family: inherit;
   color: #1d1c1c;
   white-space: pre-wrap;
