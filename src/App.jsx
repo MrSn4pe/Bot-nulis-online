@@ -126,11 +126,11 @@ export default function App() {
 
               <div className="fakultas">{fakultas}</div>
 
-              <div className="written">
-                {text.split('\n').map((line, i) => (
-                  <p key={i} className="line">{line || '\u00A0'}</p>
-                ))}
-              </div>
+              <div className="written" style={{ fontFamily: selectedFont }}>
+  {text.split('\n').map((line, i) => (
+    <p key={i} className="line">{line || '\u00A0'}</p>
+  ))}
+</div>
             </div>
           </div>
           <p className="hint">©️Dav</p>
