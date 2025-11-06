@@ -116,18 +116,17 @@ export default function App() {
                 backgroundRepeat: 'no-repeat',
               }}
             >
-             <div className="header-section">
+             {/* Header nama, kelas, fakultas, tanggal */}
+<div className="header-section">
   <div className="left-info">
-    <p><strong>Nama:</strong> {name || '................................'}</p>
-    <p><strong>Kelas/NIM:</strong> {kelas || '............................'}</p>
-    <p><strong>Fakultas:</strong> {fakultas || '............................'}</p>
+    <p>{name}</p>
+    <p>{kelas}</p>
+    <p>{fakultas}</p>
   </div>
   <div className="right-info">
-    <p><strong>Hari/Tanggal:</strong> {date || '............................'}</p>
+    <p>{date}</p>
   </div>
 </div>
-
-<hr className="header-line" />
 
 <div className="written" style={{ fontFamily: selectedFont }}>
   {text.split('\n').map((line, i) => (
