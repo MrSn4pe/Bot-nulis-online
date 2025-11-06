@@ -24,7 +24,7 @@ const FONTS = [
 
 export default function App() {
   const [paperId, setPaperId] = useState('folio')
-  const [font, setFont] = useState('patrick')
+ const [font, setFont] = useState('gloria')
   const [date, setDate] = useState('')
   const [name, setName] = useState('')
   const [kelas, setKelas] = useState('')
