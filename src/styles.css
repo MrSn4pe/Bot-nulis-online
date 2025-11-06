@@ -322,3 +322,53 @@ select#font option {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+/* ===============================================
+   HEADER (Nama, Kelas, Fakultas, Tanggal)
+   =============================================== */
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;         /* jarak dari tepi atas kertas */
+  margin-bottom: 8px;
+  padding: 0 10px;
+  font-size: 20px;
+  line-height: 31px;        /* biar sejajar garis */
+  font-family: inherit;
+  color: #111;
+  white-space: pre-wrap;
+}
+
+/* Kolom kiri (Nama, Kelas, Fakultas) */
+.left-info p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Kolom kanan (Tanggal) */
+.right-info {
+  text-align: right;
+}
+
+.right-info p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hilangkan garis ungu sebelumnya */
+.header-line {
+  display: none;
+}
+
+/* Pastikan tulisan isi sejajar garis */
+.written {
+  margin-top: 16px; /* sedikit turun agar mulai dari garis berikutnya */
+  font-size: 22px;
+  line-height: 31px; /* jarak antarbaris sama dengan garis kertas */
+  font-family: inherit;
+  color: #111;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: left;
+}
