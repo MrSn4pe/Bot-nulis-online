@@ -1,58 +1,32 @@
 :root {
-  --bg: #f4f3ef;        /* latar belakang lembut */
-  --panel: #ffffff;     /* panel putih bersih */
-  --accent: #2a62d3;    /* biru tinta */
-  --text: #1a1919;         /* teks utama */
-  --subtext: #2b2a2a;      /* teks sekunder */
-  --border: #e5e7eb;    /* garis lembut */
+  --bg: #f4f3ef;
+  --panel: #ffffff;
+  --accent: #2a62d3;
+  --text: #1a1919;
+  --subtext: #2b2a2a;
+  --border: #e5e7eb;
 }
 
-/* dasar */
+/* =================================================================== */
+/* @font-face */
+/* =================================================================== */
 * { box-sizing: border-box; }
-@font-face {
-  font-family: 'Gloria Hallelujah';
-  src: url('/fonts/GloriaHallelujah-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'HandwritingCR 2';
-  src: url('/fonts/HandwritingCR-2.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Jerimhs';
-  src: url('/fonts/Jerimhs-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'My Handwriting';
-  src: url('/fonts/My_handwriting.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'My Hands Are Holding You';
-  src: url('/fonts/MyHandsareHoldingYou.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Papernotes Sketch';
-  src: url('/fonts/Papernotes Sketch.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Papernotes';
-  src: url('/fonts/Papernotes.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Setia Hati';
-  src: url('/fonts/SetiaHati-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Shadows Into Light';
-  src: url('/fonts/ShadowsIntoLight-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Trash Hand';
-  src: url('/fonts/TrashHand.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Vanilla Pancake';
-  src: url('/fonts/Vanilla Pancake.ttf') format('truetype');
-}
+
+@font-face { font-family: 'Gloria Hallelujah'; src: url('/fonts/GloriaHallelujah-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'HandwritingCR 2'; src: url('/fonts/HandwritingCR-2.ttf') format('truetype'); }
+@font-face { font-family: 'Jerimhs'; src: url('/fonts/Jerimhs-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'My Handwriting'; src: url('/fonts/My_handwriting.ttf') format('truetype'); }
+@font-face { font-family: 'My Hands Are Holding You'; src: url('/fonts/MyHandsareHoldingYou.ttf') format('truetype'); }
+@font-face { font-family: 'Papernotes Sketch'; src: url('/fonts/Papernotes Sketch.ttf') format('truetype'); }
+@font-face { font-family: 'Papernotes'; src: url('/fonts/Papernotes.ttf') format('truetype'); }
+@font-face { font-family: 'Setia Hati'; src: url('/fonts/SetiaHati-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Shadows Into Light'; src: url('/fonts/ShadowsIntoLight-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Trash Hand'; src: url('/fonts/TrashHand.ttf') format('truetype'); }
+@font-face { font-family: 'Vanilla Pancake'; src: url('/fonts/Vanilla Pancake.ttf') format('truetype'); }
+
+/* =================================================================== */
+/* BASE STYLE */
+/* =================================================================== */
 
 body {
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -73,13 +47,19 @@ h1 {
   color: var(--text);
 }
 
-/* layout */
+/* =================================================================== */
+/* LAYOUT */
+/* =================================================================== */
+
 .container {
   display: flex;
   gap: 20px;
 }
 
-/* panel kiri */
+/* =================================================================== */
+/* PANEL KONTROL (KIRI) */
+/* =================================================================== */
+
 .controls {
   width: 360px;
   padding: 20px;
@@ -89,6 +69,7 @@ h1 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: box-shadow 0.2s ease;
 }
+
 .controls:hover {
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
@@ -100,8 +81,7 @@ h1 {
   color: var(--subtext);
 }
 
-.controls input[type=text],
-.controls input[type=file],
+.controls input,
 .controls select,
 .controls textarea {
   width: 100%;
@@ -114,6 +94,7 @@ h1 {
   font-size: 14px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
+
 .controls input:focus,
 .controls select:focus,
 .controls textarea:focus {
@@ -124,6 +105,7 @@ h1 {
 
 .controls textarea { resize: vertical; }
 
+/* Tombol */
 .buttons {
   display: flex;
   gap: 10px;
@@ -140,22 +122,27 @@ button {
   cursor: pointer;
   transition: background 0.2s, transform 0.1s;
 }
+
 button:hover {
   background: #1e4ed8;
   transform: translateY(-1px);
 }
+
 button.muted {
   background: #e5e7eb;
   color: #111;
 }
+
 button.muted:hover {
   background: #d1d5db;
 }
 
-/* area pratinjau kanan */
-.preview-area {
-  flex: 1;
-}
+/* =================================================================== */
+/* AREA PRATINJAU (KANAN) */
+/* =================================================================== */
+
+.preview-area { flex: 1; }
+
 .preview-wrap {
   padding: 16px;
   background: linear-gradient(180deg, #fafafa, #fff);
@@ -164,12 +151,14 @@ button.muted:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* kertas */
+/* =================================================================== */
+/* AREA KERTAS */
+/* =================================================================== */
+
 .paper {
   width: 720px;
   min-height: 1014px;
   margin: 0 auto;
-  padding: 70px 40px 40px;
   background: url('/img/folio.jpg') center/cover no-repeat;
   border-radius: 8px;
   border: 1px solid #ddd;
@@ -177,246 +166,80 @@ button.muted:hover {
   position: relative;
   font-family: 'Patrick Hand', cursive;
   font-size: 22px;
-  line-height: 30px;
   color: #111;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
-/* baris atas di kertas */
-.paper .meta-row {
+/* =================================================================== */
+/* HEADER DI ATAS KERTAS */
+/* =================================================================== */
+
+.header-section {
+  position: absolute;
+  top: 22px;
+  left: 65px;
+  right: 65px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 12px;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: var(--subtext);
-}
-
-.paper .name {
-  font-weight: 600;
-  color: var(--text);
-}
-.paper .kelas {
-  font-size: 13px;
-  color: var(--subtext);
-}
-
-/* tulisan */
-.paper .written {
-  margin-top: 20px;
-  font-size: 22px;
-  line-height: 1.6;
-  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
+  line-height: 22px;
   color: #111;
-  text-align: left;
+  z-index: 10;
 }
 
-/* tanda tangan */
-.paper .signature {
+.left-info p,
+.right-info p {
+  margin: 0;
+}
+
+.right-info { text-align: right; }
+
+/* =================================================================== */
+/* AREA TULISAN */
+/* =================================================================== */
+
+.written {
   position: absolute;
-  right: 28px;
-  bottom: 24px;
-  font-size: 16px;
-  color: #888;
+  top: 64px;
+  left: 65px;
+  right: 65px;
+  font-size: 22px;
+  line-height: 28px;
+  color: #1d1c1c;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
-/* hint bawah */
-.hint {
-  font-size: 13px;
-  color: var(--subtext);
-  margin-top: 8px;
+/* =================================================================== */
+/* FONT DROPDOWN */
+/* =================================================================== */
+
+select#font option[value*="Gloria"] { font-family: 'Gloria Hallelujah'; }
+select#font option[value*="HandwritingCR"] { font-family: 'HandwritingCR 2'; }
+select#font option[value*="Jerimhs"] { font-family: 'Jerimhs'; }
+select#font option[value*="My Handwriting"] { font-family: 'My Handwriting'; }
+select#font option[value*="My Hands Are Holding You"] { font-family: 'My Hands Are Holding You'; }
+select#font option[value*="Papernotes Sketch"] { font-family: 'Papernotes Sketch'; }
+select#font option[value*="Papernotes"] { font-family: 'Papernotes'; }
+select#font option[value*="Setia Hati"] { font-family: 'Setia Hati'; }
+select#font option[value*="Shadows"] { font-family: 'Shadows Into Light'; }
+select#font option[value*="Trash"] { font-family: 'Trash Hand'; }
+select#font option[value*="Vanilla"] { font-family: 'Vanilla Pancake'; }
+
+select#font option {
+  font-size: 18px;
+  padding: 4px 8px;
 }
 
-/* responsif */
+/* =================================================================== */
+/* RESPONSIVE */
+/* =================================================================== */
+
 @media(max-width: 980px) {
-  .container {
-    flex-direction: column;
-  }
-  .controls {
-    width: 100%;
-  }
+  .container { flex-direction: column; }
+  .controls { width: 100%; }
   .paper {
     width: 100%;
     font-size: 20px;
     line-height: 28px;
   }
-}
-/* ===========================================================
-   FONT DROPDOWN PREVIEW - Tampilan font langsung di pilihan
-   =========================================================== */
-
-/* Bungkus dropdown agar tampil rapi */
-.controls select {
-  font-size: 15px;
-  padding: 8px 10px;
-  border-radius: 6px;
-  border: 1px solid #d1d5db;
-  background: #f9fafb;
-  color: #111;
-  cursor: pointer;
-}
-
-/* Saat hover/fokus */
-.controls select:hover,
-.controls select:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(42, 98, 211, 0.2);
-  outline: none;
-}
-
-/* ===== Font Preview Langsung di <option> ===== */
-select#font option[value*="Gloria"]      { font-family: 'Gloria Hallelujah', cursive; }
-select#font option[value*="HandwritingCR"] { font-family: 'HandwritingCR 2', cursive; }
-select#font option[value*="Jerimhs"]     { font-family: 'Jerimhs', cursive; }
-select#font option[value*="My Handwriting"] { font-family: 'My Handwriting', cursive; }
-select#font option[value*="My Hands Are Holding You"] { font-family: 'My Hands Are Holding You', cursive; }
-select#font option[value*="Papernotes Sketch"] { font-family: 'Papernotes Sketch', cursive; }
-select#font option[value*="Papernotes"]  { font-family: 'Papernotes', cursive; }
-select#font option[value*="Setia Hati"]  { font-family: 'Setia Hati', cursive; }
-select#font option[value*="Shadows"]     { font-family: 'Shadows Into Light', cursive; }
-select#font option[value*="Trash"]       { font-family: 'Trash Hand', cursive; }
-select#font option[value*="Vanilla"]     { font-family: 'Vanilla Pancake', cursive; }
-
-/* Biar semua pilihan font terlihat agak besar dan mudah dibaca */
-select#font option {
-  font-size: 18px;
-  padding: 4px 8px;
-}
-/* header section di atas tulisan */
-.header-section {
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
-  line-height: 26px;
-  color: #000;
-  margin-bottom: 10px;
-  font-family: 'Patrick Hand', cursive;
-}
-
-.header-section p {
-  margin: 0;
-}
-
-.left-info p,
-.right-info p {
-  margin: 4px 0;
-}
-
-/* garis pemisah */
-.header-line {
-  border: none;
-  border-top: 1px solid rgba(100, 0, 150, 0.4);
-  margin: 10px 0 20px;
-}
-
-/* area tulisan */
-.written {
-  margin-top: 10px;
-  font-size: 22px;
-  line-height: 29px;
-  text-align: left;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-/* ==== Header (Nama, Kelas, Fakultas, Tanggal) ==== */
-.header-section {
-  position: absolute;
-  top: 48px; /* pas di area atas kertas */
-  left: 70px;
-  right: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  font-size: 20px;
-  line-height: 26px;
-  font-family: inherit;
-  color: #111;
-  z-index: 2;
-}
-
-.left-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.left-info p {
-  margin: 0;
-}
-
-.right-info {
-  text-align: right;
-}
-
-.right-info p {
-  margin: 0;
-}
-
-/* ==== Tulisan Utama ==== */
-.written {
-  position: absolute;
-  top: 180px; /* sejajar garis pertama kosong */
-  left: 70px;
-  right: 70px;
-  font-size: 22px;
-  line-height: 28px; /* pas dengan jarak antar garis */
-  font-family: inherit;
-  color: #111;
-  white-space: pre-wrap;
-  text-align: left;
-  z-index: 1;
-}
-
-/* ===============================================
-   HEADER FIXED DI ATAS KERTAS
-   =============================================== */
-
-.paper {
-  position: relative; /* supaya anak absolut posisinya relatif ke kertas */
-}
-
-/* Header nama, kelas, fakultas, tanggal */
-.header-section {
-  position: absolute;
-  top: 17px;              /* sesuaikan: ini jarak dari tepi atas kertas */
-  left: 5px;             /* sesuaikan agar pas di garis pertama */
-  right: 10px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  line-height: 20px;      /* agar sejajar garis folio */
-  font-family: inherit;
-  color: #111;
-  white-space: pre-wrap;
-  z-index: 2;
-}
-
-.left-info p,
-.right-info p {
-  margin: 0;
-  padding: 0;
-}
-
-/* Supaya teks di kanan tetap rata kanan */
-.right-info {
-  text-align: right;
-}
-
-/* Area tulisan utama */
-.written {
-  position: absolute;
-  top: 64px;             /* mulai dari garis keempat misalnya */
-  left: 10px;
-  right: 10px;
-  font-size: 22px;
-  line-height: 28px;
-  font-family: inherit;
-  color: #1d1c1c;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  text-align: left;
-  z-index: 1;
 }
