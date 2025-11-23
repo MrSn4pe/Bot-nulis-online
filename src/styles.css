@@ -208,7 +208,7 @@ button.muted:hover {
 .paper .written {
   margin-top: 20px;
   font-size: 22px;
-  line-height: 32px;
+  line-height: 1.6;
   font-family: 'Patrick Hand', cursive;
   color: #111;
   text-align: left;
