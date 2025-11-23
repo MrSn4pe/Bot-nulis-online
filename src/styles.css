@@ -175,13 +175,13 @@ button.muted:hover {
 
 .header-section {
   position: absolute;
-  top: 22px;
+  top: 50px;        /* sebelumnya 22px → ini yang benar */
   left: 65px;
   right: 65px;
   display: flex;
   justify-content: space-between;
   font-size: 20px;
-  line-height: 22px;
+  line-height: 28px; /* disesuaikan agar pas garis */
   color: #111;
   z-index: 10;
 }
@@ -199,15 +199,16 @@ button.muted:hover {
 
 .written {
   position: absolute;
-  top: 76px;   
+  top: 102px;        
   left: 65px;
   right: 65px;
-  font-size: 22px;
-  line-height: 32px;   
+  font-size: 21px;   
+  line-height: 32px; 
   white-space: pre-wrap;
   word-wrap: break-word;
   color: #1c1c1c;
 }
+
 
 /* =================================================================== */
 /* FONT DROPDOWN */
