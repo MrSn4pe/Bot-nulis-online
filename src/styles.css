@@ -199,14 +199,14 @@ button.muted:hover {
 
 .written {
   position: absolute;
-  top: 64px;
+  top: 76px;   
   left: 65px;
   right: 65px;
   font-size: 22px;
-  line-height: 28px;
-  color: #1d1c1c;
+  line-height: 32px;   
   white-space: pre-wrap;
   word-wrap: break-word;
+  color: #1c1c1c;
 }
 
 /* =================================================================== */
